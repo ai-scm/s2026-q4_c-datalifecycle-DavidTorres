@@ -41,18 +41,6 @@ Se centra en la preparación ("tarea doméstica"), limpieza, gobierno y organiza
 
 ---
 
-## Cómo Importar y Editar los Diagramas en draw.io
-
-Los diagramas fueron construidos utilizando el motor XML nativo de **draw.io** para garantizar una distribución radial limpia, nodos estilizados y conectores curvos (`entityRelationEdgeStyle`).
-
-1. Ingresa a [app.diagrams.net](https://app.diagrams.net/) y abre un lienzo en blanco.
-2. En el menú superior, navega a **Extras > Editar diagrama...** (*Extras > Edit Diagram...*).
-3. Selecciona y elimina todo el contenido XML existente en la ventana emergente.
-4. Pega el bloque XML correspondiente al mapa mental deseado (**Etapa 1** o **Etapa 2**) y haz clic en **Aceptar**.
-5. Para exportar el resultado final, ve a **Archivo > Exportar como** y selecciona `PNG`, `PDF` o `SVG`.
-
----
-
 ## Referencia
 
 * **Fuente base:** *AWS – Guía de referencia del ciclo de vida de los datos* (Etapa 1: Ingesta de datos, págs. 17–23; Etapa 2: Montaje de datos, págs. 25–30). © Amazon Web Services, Inc.
