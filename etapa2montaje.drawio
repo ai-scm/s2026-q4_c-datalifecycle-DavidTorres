@@ -1,0 +1,211 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Página-1" id="SiE42xwUUhgD2Ibt7pxE">
+    <mxGraphModel dx="2668" dy="1568" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="central" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#232F3E;fontColor=#FFFFFF;strokeColor=#FF9900;strokeWidth=4;fontSize=15;" value="&lt;b&gt;ETAPA 2: MONTAJE DE DATOS EN AWS&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Tarea doméstica, limpieza, almacenamiento y estructuración&lt;br&gt;antes de poner los datos a disposición para análisis&lt;/font&gt;" vertex="1">
+          <mxGeometry height="125" width="320" x="1240" y="920" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9900;fontColor=#232F3E;strokeColor=none;fontSize=13;" value="&lt;b&gt;1. Fundamentos, Desafíos y Criterios&lt;/b&gt;" vertex="1">
+          <mxGeometry height="45" width="260" x="830" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c_r1" edge="1" parent="1" source="central" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=3;strokeColor=#FF9900;endArrow=none;" target="r1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r1_1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE0B2;fontColor=#232F3E;strokeColor=#FF9900;" value="&lt;b&gt;Propósito y Desafíos&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="180" x="560" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r1_1" edge="1" parent="1" source="r1" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#FF9900;endArrow=none;" target="r1_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r1_1a" parent="1" style="text;html=1;strokeColor=#FF9900;fillColor=#FFF8EE;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• Datos dispersos en múltiples sistemas: depósitos, hojas de cálculo, BD y archivos de texto&lt;br&gt;• Crecimiento exponencial de &lt;b&gt;variedad y volumen&lt;/b&gt;&lt;br&gt;• Complejidad en seguridad, gobernanza obligatoria, control de acceso y demanda analítica" vertex="1">
+          <mxGeometry height="75" width="430" x="80" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r1_1a" edge="1" parent="1" source="r1_1" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#FF9900;endArrow=none;" target="r1_1a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r1_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFE0B2;fontColor=#232F3E;strokeColor=#FF9900;" value="&lt;b&gt;Preguntas Clave de Diseño&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="180" x="560" y="340" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r1_2" edge="1" parent="1" source="r1" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#FF9900;endArrow=none;" target="r1_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r1_2a" parent="1" style="text;html=1;strokeColor=#FF9900;fillColor=#FFF8EE;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• &lt;b&gt;¿Casos de uso?&lt;/b&gt; No configurar un Data Warehouse si basta una BD transaccional (OLTP)&lt;br&gt;• &lt;b&gt;¿Tamaño del dataset?&lt;/b&gt; General → Amazon S3 | Muy pequeños → búfer en Kinesis Firehose&lt;br&gt;• &lt;b&gt;¿Estructura y costos?&lt;/b&gt; Define el motor de almacenamiento o base de datos ideal" vertex="1">
+          <mxGeometry height="75" width="430" x="80" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r1_2a" edge="1" parent="1" source="r1_2" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#FF9900;endArrow=none;" target="r1_2a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1A73E8;fontColor=#FFFFFF;strokeColor=none;fontSize=13;" value="&lt;b&gt;2. Almacenamiento de Objetos (Amazon S3)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="45" width="270" x="1680" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c_r2" edge="1" parent="1" source="central" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=3;strokeColor=#1A73E8;endArrow=none;" target="r2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D2E3FC;fontColor=#174EA6;strokeColor=#1A73E8;" value="&lt;b&gt;Capacidades Core de S3&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="180" x="2010" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r2_1" edge="1" parent="1" source="r2" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#1A73E8;endArrow=none;" target="r2_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_1a" parent="1" style="text;html=1;strokeColor=#1A73E8;fillColor=#F0F6FF;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• Almacenamiento de objetos: extremadamente durable, altamente disponible e infinitamente escalable&lt;br&gt;• Pago por uso sin inversión inicial; interfaz web sencilla desde cualquier lugar&lt;br&gt;• Flexibilidad total: desde respaldos/DR hasta sitios masivos como Amazon.com" vertex="1">
+          <mxGeometry height="80" width="460" x="2240" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r2_1a" edge="1" parent="1" source="r2_1" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#1A73E8;endArrow=none;" target="r2_1a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D2E3FC;fontColor=#174EA6;strokeColor=#1A73E8;" value="&lt;b&gt;Metadatos Definidos por Usuario&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="190" x="2010" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r2_2" edge="1" parent="1" source="r2" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#1A73E8;endArrow=none;" target="r2_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_2a" parent="1" style="text;html=1;strokeColor=#1A73E8;fillColor=#F0F6FF;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• &lt;b&gt;Técnicos:&lt;/b&gt; Formato, estructura, checksum, conteo filas, fecha, tipo y tamaño de archivo&lt;br&gt;• &lt;b&gt;Operacionales:&lt;/b&gt; Fuente, frecuencia, tamaño (full/incremental), vigencia, linaje, propietario&lt;br&gt;• &lt;b&gt;De Negocio:&lt;/b&gt; Significado/contexto, clasificación, PII/PHI, llaves primarias/foráneas, dominio" vertex="1">
+          <mxGeometry height="85" width="460" x="2240" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r2_2a" edge="1" parent="1" source="r2_2" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#1A73E8;endArrow=none;" target="r2_2a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D2E3FC;fontColor=#174EA6;strokeColor=#1A73E8;" value="&lt;b&gt;S3 Object Tags + IAM&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="180" x="2010" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r2_3" edge="1" parent="1" source="r2" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#1A73E8;endArrow=none;" target="r2_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2_3a" parent="1" style="text;html=1;strokeColor=#1A73E8;fillColor=#F0F6FF;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• Pares &lt;b&gt;Clave/Valor&lt;/b&gt; externos al contenido del objeto (similar a datos EXIF en JPEG)&lt;br&gt;• Combinados con &lt;b&gt;AWS IAM&lt;/b&gt; controlan acceso granular y clasificación de seguridad&lt;br&gt;• &lt;b&gt;Ejemplos:&lt;/b&gt; Clasificación=Sensible | Caso de uso=Análisis | Proyecto=OTA | PII=Verdadero" vertex="1">
+          <mxGeometry height="80" width="460" x="2240" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r2_3a" edge="1" parent="1" source="r2_3" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#1A73E8;endArrow=none;" target="r2_3a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0F9D58;fontColor=#FFFFFF;strokeColor=none;fontSize=13;" value="&lt;b&gt;3. Creación de Lago de Datos (Data Lake)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="45" width="270" x="1680" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c_r3" edge="1" parent="1" source="central" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=3;strokeColor=#0F9D58;endArrow=none;" target="r3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3_1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CEEAD6;fontColor=#0D652D;strokeColor=#0F9D58;" value="&lt;b&gt;Arquitectura y Beneficios&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="180" x="2010" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r3_1" edge="1" parent="1" source="r3" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#0F9D58;endArrow=none;" target="r3_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3_1a" parent="1" style="text;html=1;strokeColor=#0F9D58;fillColor=#EFFAF3;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• Almacena datos &lt;b&gt;tal como están&lt;/b&gt; (estructurados o no estructurados) sin esquema predefinido&lt;br&gt;• Desglosa silos de datos y &lt;b&gt;desacopla el almacenamiento del cómputo&lt;/b&gt; sobre Amazon S3&lt;br&gt;• Admite formatos abiertos y conecta con todos los servicios analíticos de AWS" vertex="1">
+          <mxGeometry height="80" width="460" x="2240" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r3_1a" edge="1" parent="1" source="r3_1" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#0F9D58;endArrow=none;" target="r3_1a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#CEEAD6;fontColor=#0D652D;strokeColor=#0F9D58;" value="&lt;b&gt;AWS Lake Formation (5 Pasos)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="190" x="2010" y="830" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r3_2" edge="1" parent="1" source="r3" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#0F9D58;endArrow=none;" target="r3_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3_2a" parent="1" style="text;html=1;strokeColor=#0F9D58;fillColor=#EFFAF3;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• Plantilla para configurar un lago de datos curado y seguro en días:&lt;br&gt;  &lt;b&gt;1)&lt;/b&gt; Configurar almacenamiento  &lt;b&gt;2)&lt;/b&gt; Mover datos  &lt;b&gt;3)&lt;/b&gt; Limpiar, preparar y catalogar&lt;br&gt;  &lt;b&gt;4)&lt;/b&gt; Configurar políticas de seguridad/cumplimiento  &lt;b&gt;5)&lt;/b&gt; Habilitar datos para análisis" vertex="1">
+          <mxGeometry height="80" width="460" x="2240" y="800" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r3_2a" edge="1" parent="1" source="r3_2" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#0F9D58;endArrow=none;" target="r3_2a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#8E24AA;fontColor=#FFFFFF;strokeColor=none;fontSize=13;" value="&lt;b&gt;4. Bases de Datos Relacionales y Caché&lt;/b&gt;" vertex="1">
+          <mxGeometry height="45" width="260" x="810" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c_r4" edge="1" parent="1" source="central" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=3;strokeColor=#8E24AA;endArrow=none;" target="r4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4_1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1BEE7;fontColor=#4A148C;strokeColor=#8E24AA;" value="&lt;b&gt;Amazon Aurora y Serverless&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="190" x="550" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r4_1" edge="1" parent="1" source="r4" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#8E24AA;endArrow=none;" target="r4_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4_1a" parent="1" style="text;html=1;strokeColor=#8E24AA;fillColor=#F8EFFB;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• Compatible con &lt;b&gt;MySQL y PostgreSQL&lt;/b&gt;; escala hasta &lt;b&gt;64 TB&lt;/b&gt; por instancia&lt;br&gt;• Hasta &lt;b&gt;15 réplicas de lectura&lt;/b&gt;, replicación en &lt;b&gt;3 AZ&lt;/b&gt;, autorreparable y respaldo continuo a S3&lt;br&gt;• &lt;b&gt;Aurora Serverless (MySQL):&lt;/b&gt; Escala/apaga bajo demanda; pago por segundo (cargas intermitentes)" vertex="1">
+          <mxGeometry height="80" width="440" x="60" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r4_1a" edge="1" parent="1" source="r4_1" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#8E24AA;endArrow=none;" target="r4_1a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1BEE7;fontColor=#4A148C;strokeColor=#8E24AA;" value="&lt;b&gt;Amazon RDS y RDS on VMware&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="190" x="550" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r4_2" edge="1" parent="1" source="r4" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#8E24AA;endArrow=none;" target="r4_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4_2a" parent="1" style="text;html=1;strokeColor=#8E24AA;fillColor=#F8EFFB;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• Automatiza hardware, parches y respaldos; 6 motores: &lt;b&gt;Aurora, PostgreSQL, MySQL, MariaDB, Oracle y SQL Server&lt;/b&gt;&lt;br&gt;• Instancias optimizadas para memoria, rendimiento o E/S (2 AZ)&lt;br&gt;• &lt;b&gt;RDS on VMware:&lt;/b&gt; Extiende gestión RDS a centros de datos privados VMware vSphere locales" vertex="1">
+          <mxGeometry height="80" width="440" x="60" y="810" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r4_2a" edge="1" parent="1" source="r4_2" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#8E24AA;endArrow=none;" target="r4_2a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4_3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E1BEE7;fontColor=#4A148C;strokeColor=#8E24AA;" value="&lt;b&gt;Amazon ElastiCache&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="190" x="550" y="1030" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r4_3" edge="1" parent="1" source="r4" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#8E24AA;endArrow=none;" target="r4_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4_3a" parent="1" style="text;html=1;strokeColor=#8E24AA;fillColor=#F8EFFB;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• Caché en memoria administrado (&lt;b&gt;Hot Data&lt;/b&gt;, tamaño GB, disponibilidad 2 AZ)&lt;br&gt;• Tasas de solicitud ultra altas y latencia ultra baja (evita leer de discos lentos)" vertex="1">
+          <mxGeometry height="65" width="440" x="60" y="1010" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r4_3a" edge="1" parent="1" source="r4_3" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#8E24AA;endArrow=none;" target="r4_3a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#D93025;fontColor=#FFFFFF;strokeColor=none;fontSize=13;" value="&lt;b&gt;5. Bases de Datos NoSQL y Especializadas&lt;/b&gt;" vertex="1">
+          <mxGeometry height="45" width="280" x="1260" y="1320" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c_r5" edge="1" parent="1" source="central" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=3;strokeColor=#D93025;endArrow=none;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="r5">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5_1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAD2CF;fontColor=#A50E0E;strokeColor=#D93025;" value="&lt;b&gt;DynamoDB y DocumentDB&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="200" x="580" y="1470" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r5_1" edge="1" parent="1" source="r5" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#D93025;endArrow=none;" target="r5_1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5_1a" parent="1" style="text;html=1;strokeColor=#D93025;fillColor=#FCE8E6;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• &lt;b&gt;DynamoDB:&lt;/b&gt; Clave-valor y documentos; latencia de milisegundos de un dígito (3 AZ, +DAX caché)&lt;br&gt;• Soporta &lt;b&gt;+10 billones de solicitudes/día&lt;/b&gt; y picos de +20M req/seg (Lyft, Airbnb, Capital One)&lt;br&gt;• &lt;b&gt;DocumentDB:&lt;/b&gt; Admite documentos grandes y es compatible con &lt;b&gt;MongoDB&lt;/b&gt;&lt;br&gt;• &lt;b&gt;Caso Healthdirect Australia:&lt;/b&gt; Arquitectura dual lectura/escritura (DynamoDB, S3, Lambda, Kinesis, Athena)" vertex="1">
+          <mxGeometry height="95" width="500" x="430" y="1540" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r5_1a" edge="1" parent="1" source="r5_1" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#D93025;endArrow=none;" target="r5_1a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5_2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAD2CF;fontColor=#A50E0E;strokeColor=#D93025;" value="&lt;b&gt;Amazon Neptune (Grafos)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="180" x="1150" y="1470" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r5_2" edge="1" parent="1" source="r5" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#D93025;endArrow=none;" target="r5_2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5_2a" parent="1" style="text;html=1;strokeColor=#D93025;fillColor=#FCE8E6;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• Datos altamente conectados: almacena miles de millones de relaciones con latencia de milisegundos (3 AZ)&lt;br&gt;• Modelos &lt;b&gt;Property Graph y RDF (W3C)&lt;/b&gt;; consultas con &lt;b&gt;Apache TinkerPop Gremlin y SPARQL&lt;/b&gt;&lt;br&gt;• Uso: recomendación, detección de fraude, grafos de conocimiento y descubrimiento de fármacos" vertex="1">
+          <mxGeometry height="85" width="480" x="1000" y="1540" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r5_2a" edge="1" parent="1" source="r5_2" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#D93025;endArrow=none;" target="r5_2a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5_3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAD2CF;fontColor=#A50E0E;strokeColor=#D93025;" value="&lt;b&gt;Amazon QLDB (Libro Contable)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="210" x="1670" y="1470" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r5_3" edge="1" parent="1" source="r5" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#D93025;endArrow=none;" target="r5_3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5_3a" parent="1" style="text;html=1;strokeColor=#D93025;fillColor=#FCE8E6;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• Registro de transacciones &lt;b&gt;transparente, inmutable y verificable criptográficamente&lt;/b&gt;&lt;br&gt;• Propiedad de una autoridad central de confianza; mantiene historial completo de cambios" vertex="1">
+          <mxGeometry height="65" width="450" x="1550" y="1540" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r5_3a" edge="1" parent="1" source="r5_3" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#D93025;endArrow=none;" target="r5_3a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5_4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FAD2CF;fontColor=#A50E0E;strokeColor=#D93025;" value="&lt;b&gt;Amazon Timestream (Series de Tiempo)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="35" width="240" x="2170" y="1470" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r5_4" edge="1" parent="1" source="r5" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeWidth=2;strokeColor=#D93025;endArrow=none;" target="r5_4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5_4a" parent="1" style="text;html=1;strokeColor=#D93025;fillColor=#FCE8E6;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=1;spacingLeft=8;fontSize=11;" value="• Para IoT y monitoreo operativo: analiza miles de millones de eventos/día a &lt;b&gt;1/10 del costo relacional&lt;/b&gt;&lt;br&gt;• Optimizado para datos ordenados por tiempo, de &lt;b&gt;solo adjuntar (append-only)&lt;/b&gt; y consultas por intervalos" vertex="1">
+          <mxGeometry height="70" width="460" x="2060" y="1540" as="geometry" />
+        </mxCell>
+        <mxCell id="e_r5_4a" edge="1" parent="1" source="r5_4" style="edgeStyle=entityRelationEdgeStyle;curved=1;html=1;strokeColor=#D93025;endArrow=none;" target="r5_4a">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
